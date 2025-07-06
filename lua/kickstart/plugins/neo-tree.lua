@@ -11,7 +11,7 @@ return {
   },
   lazy = false,
   keys = {
-    { '<F3>', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '<F3>', ':Neotree toggle reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
   opts = {
     filesystem = {

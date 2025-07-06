@@ -66,6 +66,10 @@ vim.o.splitbelow = true
 vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
+-- Sets folding
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+
 -- Preview substitutions live, as you type!
 vim.o.inccommand = 'split'
 
@@ -130,6 +134,16 @@ vim.keymap.set('n', '<leader>bd', ':bd<CR>', {
   silent = true,
   desc = 'Close current buffer (delete from list)',
 })
+
+-- Set a keybinding for TagbarToggle
+vim.keymap.set('n', '<F2>', ':TagbarToggle<CR>', { desc = 'Toggle Tagbar' })
+
+-- lua/init.lua or a file sourced by it
+vim.filetype.add {
+  extension = {
+    inc = 'cpp',
+  },
+}
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
