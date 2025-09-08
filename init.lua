@@ -67,8 +67,8 @@ vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Sets folding
-vim.wo.foldmethod = 'expr'
-vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+-- vim.wo.foldmethod = 'expr'
+-- vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 
 -- Preview substitutions live, as you type!
 vim.o.inccommand = 'split'
