@@ -145,6 +145,7 @@ vim.keymap.set('n', '<F2>', ':TagbarToggle<CR>', { desc = 'Toggle Tagbar' })
 vim.filetype.add {
   extension = {
     inc = 'cpp',
+    hip = 'cpp',
   },
 }
 
@@ -962,7 +963,7 @@ require('lazy').setup({
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    main = 'nvim-treesitter.configs', -- Sets main module to use for opts
+    -- main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
       ensure_installed = {
